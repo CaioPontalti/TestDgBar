@@ -29,7 +29,7 @@ namespace Clearsale.Api.Controllers
 
         [HttpPost]
         [Route("include-product")]
-        [AllowAnonymous]
+        [Authorize]
         public async Task<ResponseCommand> Create([FromBody] CreateOrderCommand command)
         {
             try
@@ -47,7 +47,7 @@ namespace Clearsale.Api.Controllers
 
         [HttpPost]
         [Route("clear-order")]
-        [AllowAnonymous]
+        [Authorize]
         public async Task<ResponseCommand> Clear([FromBody] ClearOrderCommand command)
         {
             try
@@ -65,7 +65,7 @@ namespace Clearsale.Api.Controllers
 
         [HttpPost]
         [Route("pay-order")]
-        [AllowAnonymous]
+        [Authorize]
         public async Task<ResponseCommand> Pay([FromBody] PayOrderCommand command)
         {
             try

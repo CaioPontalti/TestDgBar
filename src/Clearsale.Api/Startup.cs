@@ -1,4 +1,5 @@
 ﻿
+using Clearsale.Api.Config.Ioc;
 using Clearsale.Api.Config.Jwt;
 using Clearsale.Api.Config.Swagger;
 using Clearsale.Domain.Handler.Order;
@@ -31,20 +32,11 @@ namespace Clearsale.Api
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddScoped<DataContext>();
-
-            services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<IOrderRepository, OrderRepository>();
-            
-            services.AddScoped<UserHandler>();
-            services.AddScoped<CreateOrderHandler>();
-            services.AddScoped<ClearOrderHandler>();
-            services.AddScoped<PayOrderHandler>();
+            services.AddIocConfig(); //Ioc
 
             services.AddJwt(Configuration); //JWT
             
-            services.AddSwaggerConfig(Configuration);//Swagger
+            services.AddSwaggerConfig();//Swagger
 
         }
 

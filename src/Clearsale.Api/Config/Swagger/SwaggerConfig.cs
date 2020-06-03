@@ -10,7 +10,7 @@ namespace Clearsale.Api.Config.Swagger
 {
     public static class SwaggerConfig
     {
-        public static IServiceCollection AddSwaggerConfig(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddSwaggerConfig(this IServiceCollection services)
         {
             services.AddSwaggerGen(s =>
             {
