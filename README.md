@@ -19,6 +19,9 @@ Sql Server Express
   * Utilização da Ioc e Repository Pattern para separação da aplicação e a camada de banco.
   * Padronização do retorno da API para o front-end. Facilita na comunicação entre back e front, pois o front sempre esperará um objeto no msm formato.
   * Utilização de objetos anonimos nas execuções das queries para evitar sql injection
+  
+  * Tanto o número da comanda como o produção são int.
+  * Só é possível inserir um item por vez, passando o numero da comanda e o id do produto (que viria de um dropdown por exemplo)
  
 => Pontos de evolução
   * Desenvolvimento do front-end. Não é minha especialidade front-end, por isso não desenvolvi a tela, porem estou estudando VueJS e a nive de consulta mues repositórios do vue estão abertos no githud
